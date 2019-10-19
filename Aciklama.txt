@@ -1,0 +1,15 @@
+(Unity 2019.2.1f - Android)
+Biraz nasıl çalıştığından bahsedeyim:
+*GameManager oyunu başlatıyor.
+*Gerekli poolling işlemlerinden sonra LevelManager level'i hazırlıyor.
+*InputManager'den mouse pozisyonu Player'e aktarılıp kazma/yol açma işlemi yapılıyor.
+
+Detay:
+Kazılacak/ Yol açılacak alanı (kat(floor) olarak isimlendirdim) katlar halinde yaptım.
+Başlangıç ve bitiş katları sabit. Kat sayısı level sayısı ile oranlı artıyor. Her 3 levelde bir kat artıyor.
+Basit olarak hazırladığım engel setleri bu katlara random olarak ekleniyor.
+Level sayısı arttıkça kat sayısı artıyor dolayısı ile oyun sonsuza kadar sürebilir ama engel setlerinin sayısının az olması nedeni ile (tekrar mekanizması ile uğraşacak vakim olmadı) bazı katlar boş olacaktır.
+
+3rd Party Assetler
+Dependency Injection için Zenject kullandım.
+Oyundaki araç modeli ve birkaç texture'yi SandBalls oyunundan aldım.
